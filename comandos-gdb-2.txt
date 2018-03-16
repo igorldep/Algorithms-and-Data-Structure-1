@@ -1,0 +1,145 @@
+Para gerar o executável capaz de ser depurado deve-se compilar com a flag -g no g++.
+
+Comandos para o depurador gdb:
+
+No terminal: 
+
+>gdb programa
+- Abre o gdb para executar passo a passo o executável 'programa'.
+
+>gdb programa --tui
+- Abre o gdb para executar passo a passo o executável 'programa', visualizando o código.
+
+
+No gdb:
+
+AJUDA
+
+>help
+Lista as classes de comandos
+
+>help comando
+Descrição do comando
+
+
+CONSULTA SOBRE OS OBJETOS DAS CLASSES EXISTENTES
+
+>info breakpoints
+Lista os pontos de paradas
+
+>info break
+Lista os números dos pontos de paradas
+
+>info break numero-do-ponto
+Lista informações específicas sobre um ponto de parada
+
+
+PONTOS DE PARADA E CONDIÇÕES DE PARADA
+
+>break nome-do-fonte:nome-da-funcao
+>break nome-do-fonte:numero-da-linha
+>break nome-da-classe:funcao-membro
+Insere um ponto de parada durante a execução em um ponto específico
+
+>break +numero-de-linhas-a-frente
+>break -numero-de-linhas-atras
+Insere um ponto de parada relativo a linha de execução atual
+
+>break * if teste-logico
+Insere e ativa um ponto de parada em * caso a condição de teste for atendida.
+
+>tbreak
+Insere um ponto de parada temporário (Para-se uma vez apenas, depois o ponto é destruído)
+
+>watch teste-logico
+Suspende o processamente caso a condição de teste for atendida
+
+>delete
+Remove todos os pontos de parada
+
+>delete numero-do-ponto
+Remove o ponto de parada especificado
+
+>info break
+Informações sobre os pontos de paradas
+
+
+EXECUÇÃO
+
+>quit
+>q
+Sai do gdb
+
+>run
+>r
+Executa o programa à partir do início
+
+>continue
+>c
+Continua a execução à partir de um ponto de parada
+
+>kill
+Para a execução do programa
+
+>next
+>n
+>next numero-de-passos-seguidos
+Executa seguidamente as instruções sem entrar dentro das funções
+
+>step
+>s
+>step numero-de-passos-seguidos
+Executa seguidamente as instruções entrando dentro das funções
+
+>until
+>u
+Executa seguidamente as instruções, porém apresenta explicitamente apenas uma iteração de um laço de repetição
+
+>until local
+>u local
+Executa até um local especificado como no comando break
+
+>finish
+Executa até o fim da função corrente e retorna para logo em seguida onde foi chamada
+
+>backtrace
+>bt
+Apresenta a pilha de chamadas de funções até o ponto em que a execução está
+
+>bt full
+Apresenta os valores das variáveis locais
+
+
+VISUALIZAR VALORES DA VARIÁVEIS
+
+>print variavel
+>p variavel
+>p funcao::variavel
+Imprime uma vez o valor da variável
+
+>p vetor[pos]@numero-de-elementos
+>p *(vetor + pos)@numero-de-elementos
+Imprime uma vez numero-de-elementos seguidos do vetor à partir da posição pos
+
+>p {var1, var2, ..., varn}
+Imprime n variaveis do mesmo tipo de nomes var1, var2, ..., varn.
+
+>call funcao
+>call expr
+Executa uma função ou avalia uma expressão
+
+>display opcoes
+>disp opcoes
+>Imprime automaticamente em cada passo o valor de uma variável, informado em 'opcoes' como em p
+
+>undisplay numero-disp
+>delete display numero-disp
+>Remove da impressão automática a variável cujo display é identificada por numero-disp
+
+>enable/disable display numero-disp
+Habilita/desabilita o display identificado por numero-disp
+
+>info display
+Informações sobre o display
+
+Mais detalhes em: http://www.yolinux.com/TUTORIALS/GDB-Commands.html

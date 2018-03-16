@@ -1,0 +1,24 @@
+Passeio do Cavalo
+
+1 - Compilar e executar o projeto passeio do cavalo com diferentes resoluções de tabuleiro e distintas posições iniciais
+2 - Executar passo a passo no gdb
+3 - Inserir um ponto de parada nas linhas 136 e 144 de passeiocavalo.cpp e linha 13 de main.cpp
+4 - Ao executar com 'run' no primeiro ponto de parada inserir na lista de apresentação as variáveis 'move_id', 't_id' 'col', 'row', 'next_col', 'next_row', 'success_move', 'success' e a função membro 'map.print_map()' da seguinte forma:
+	disp {move_id, t_id}
+	disp {col, row, next_col, next_row}
+	disp success_move
+	disp success					- Pergunte ao professor o porquê não se pode colocar na mesma list de display success_move e success.
+	disp print_map()
+5 - Continue a execução passo a passo até o algoritmo
+
+PS: De vez em quando veja a pilha de chamadas com 'bt' ou 'bt full'
+
+
+
+
+Aquecimento para o Trabalho Prático
+
+1 - Acesse https://a2oj.com/ crie uma conta e faça o login.
+2 - Pesquise pela competição criada pelo usuário 'bonanca' ou acesse https://a2oj.com/?Username=bonanca
+3 - Cadastre na competição '30793 - LAEDS1-CEFETMG-BH-0'
+4 - Faça todos os exercícios entre as 13:00h de 24/3/2017 até as 20:00 de 26/3/2017. Nas últimas 5 horas os competidores não verão a corretude das soluções, porém podem continuar a submetê-las.
